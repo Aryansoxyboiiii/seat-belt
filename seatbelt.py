@@ -1,6 +1,4 @@
 
-
-
 import cv2
 from cv2 import waitKey
 import numpy as np
@@ -14,7 +12,7 @@ def Slope(a,b,c,d):
 # Reading Image
 #beltframe = cv2.imread("C:\\Users\\soura\\Desktop\\aryan\\seat belt\\image.jpg")
 #beltframe = cv2.imread("C:\\Users\\soura\\Desktop\\aryan\\seat belt\\CarSeat_boy_seatbelt_green.jpg")
-beltframe = cv2.imread("C:\\Users\\soura\\Desktop\\aryan\\seat belt\\Capture.JPG")
+beltframe = cv2.imread("C:\\Users\\soura\\Desktop\\aryan\\seat-belt\\Capture.JPG")
 # Resizing The Image
 beltframe = imutils.resize(beltframe, height=800)
 
