@@ -1,18 +1,15 @@
-
 import cv2
-from cv2 import waitKey
 import numpy as np
 import imutils
-import messege
+
 #Slope of line
 def Slope(a,b,c,d):
     return (d - b)/(c - a)
 
 
 # Reading Image
-#beltframe = cv2.imread("C:\\Users\\soura\\Desktop\\aryan\\seat-belt\\image.JPG")
-beltframe = cv2.imread("C:\\Users\\soura\\Desktop\\aryan\\seat-belt\\CarSeat_boy_seatbelt_green.JPG")
-#beltframe = cv2.imread("C:\\Users\\soura\\Desktop\\aryan\\seat-belt\\Capture.JPG")
+beltframe = cv2.imread("Test.jpg")
+
 # Resizing The Image
 beltframe = imutils.resize(beltframe, height=800)
 
@@ -24,6 +21,7 @@ belt = False
 
 # Bluring The Image For Smoothness
 blur = cv2.blur(beltgray, (1, 1))
+
 # Converting Image To Edges
 edges = cv2.Canny(blur, 50, 400)
 
@@ -73,9 +71,7 @@ if lines is not None:
                    
 if belt == False:
     print("No Seatbelt detected")
-    messege.Response()
-
 
 # Show The "beltframe"
 cv2.imshow("Seat Belt", beltframe)
-#waitKey(0)
+waitKey(0)
